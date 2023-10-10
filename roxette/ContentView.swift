@@ -5,57 +5,64 @@
 //  Created by Javier Godoy Núñez on 10/10/23.
 //
 
-import SwiftUI
+import AVKit
 import SwiftData
+import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+  @StateObject private var player = PlayerViewModel()
+  @State private var wasPlayingBeforeDrag: Bool = false
+  @State private var isDragging: Bool = false
 
-    var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
+  var body: some View {
+    VStack {
+      Text(player.currentTitle)
+        .font(.headline)
+        .padding()
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
+      Button(action: player.play) {
+        Image(systemName: "play.circle.fill")
+          .resizable()
+          .frame(width: 50, height: 50)
+      }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+      Button(action: player.pause) {
+        Image(systemName: "pause.circle.fill")
+          .resizable()
+          .frame(width: 50, height: 50)
+      }
+
+      if player.duration > 0 {
+        Slider(
+          value: $player.currentTime, in: 0...player.duration, step: 1,
+          onEditingChanged: { editing in
+
+            isDragging = editing
+            if editing {
+              wasPlayingBeforeDrag = player.isPlaying
+              player.pause()
+            } else if wasPlayingBeforeDrag {
+              player.play()
             }
+          }
+        ) {
+          Text("Progress")
         }
+        .padding()
+        .onChange(
+          of: player.currentTime,
+          perform: { value in
+            if isDragging {
+              player.seek(to: value)
+            }
+          })
+      }
     }
+    .padding()
+  }
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+  ContentView()
+    .modelContainer(for: Item.self, inMemory: true)
 }

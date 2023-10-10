@@ -20,42 +20,43 @@ struct ContentView: View {
         .font(.headline)
         .padding()
 
-      Button(action: player.play) {
-        Image(systemName: "play.circle.fill")
-          .resizable()
-          .frame(width: 50, height: 50)
-      }
+      HStack {
+        Button(action: {
+          if player.isPlaying {
+            player.pause()
+          } else {
+            player.play()
+          }
+        }) {
+          Image(systemName: player.isPlaying ? "pause.circle.fill" : "play.circle.fill")
+            .resizable()
+            .frame(width: 50, height: 50)
+        }.padding()
 
-      Button(action: player.pause) {
-        Image(systemName: "pause.circle.fill")
-          .resizable()
-          .frame(width: 50, height: 50)
-      }
+        if player.duration > 0 {
+          Slider(
+            value: $player.currentTime, in: 0...player.duration, step: 1,
+            onEditingChanged: { editing in
 
-      if player.duration > 0 {
-        Slider(
-          value: $player.currentTime, in: 0...player.duration, step: 1,
-          onEditingChanged: { editing in
-
-            isDragging = editing
-            if editing {
-              wasPlayingBeforeDrag = player.isPlaying
-              player.pause()
-            } else if wasPlayingBeforeDrag {
-              player.play()
+              isDragging = editing
+              if editing {
+                wasPlayingBeforeDrag = player.isPlaying
+                player.pause()
+              } else if wasPlayingBeforeDrag {
+                player.play()
+              }
+            }
+          ) {
+            Text("Progress")
+          }
+          .padding()
+          .onChange(of: player.currentTime) { (oldValue, newValue) in
+            if isDragging {
+              player.seek(to: newValue)
             }
           }
-        ) {
-          Text("Progress")
+
         }
-        .padding()
-        .onChange(
-          of: player.currentTime,
-          perform: { value in
-            if isDragging {
-              player.seek(to: value)
-            }
-          })
       }
     }
     .padding()

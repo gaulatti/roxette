@@ -13,6 +13,13 @@
 		7168C23F2AD5DA94003156C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7168C23E2AD5DA94003156C3 /* Assets.xcassets */; };
 		7168C2422AD5DA94003156C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7168C2412AD5DA94003156C3 /* Preview Assets.xcassets */; };
 		7168C24B2AD5DC8A003156C3 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7168C24A2AD5DC8A003156C3 /* PlayerViewModel.swift */; };
+		718AE0242AD75C1D00A5DCA3 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0232AD75C1D00A5DCA3 /* PlayerView.swift */; };
+		718AE0512AD76E2D00A5DCA3 /* Helixa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 718AE0452AD76E2C00A5DCA3 /* Helixa-Light.ttf */; };
+		718AE0582AD7711700A5DCA3 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0572AD7711700A5DCA3 /* FontExtension.swift */; };
+		718AE05A2AD773E500A5DCA3 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0592AD773E500A5DCA3 /* ColorExtension.swift */; };
+		718AE05C2AD7790200A5DCA3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE05B2AD7790200A5DCA3 /* MenuView.swift */; };
+		718AE05E2AD7794A00A5DCA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE05D2AD7794A00A5DCA3 /* MainView.swift */; };
+		718AE0612AD77A1100A5DCA3 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0602AD77A1100A5DCA3 /* ButtonComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		7168C2412AD5DA94003156C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7168C2482AD5DC44003156C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7168C24A2AD5DC8A003156C3 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		718AE0232AD75C1D00A5DCA3 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		718AE0452AD76E2C00A5DCA3 /* Helixa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Helixa-Light.ttf"; sourceTree = "<group>"; };
+		718AE0572AD7711700A5DCA3 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		718AE0592AD773E500A5DCA3 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		718AE05B2AD7790200A5DCA3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		718AE05D2AD7794A00A5DCA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		718AE0602AD77A1100A5DCA3 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,10 @@
 		7168C2372AD5DA93003156C3 /* roxette */ = {
 			isa = PBXGroup;
 			children = (
+				718AE05F2AD77A0700A5DCA3 /* components */,
+				718AE0562AD7710900A5DCA3 /* extensions */,
+				718AE0552AD76E3400A5DCA3 /* fonts */,
+				718AE0222AD75C0900A5DCA3 /* views */,
 				7168C2492AD5DC77003156C3 /* models */,
 				7168C2482AD5DC44003156C3 /* Info.plist */,
 				7168C2382AD5DA93003156C3 /* roxetteApp.swift */,
@@ -81,6 +99,41 @@
 				7168C24A2AD5DC8A003156C3 /* PlayerViewModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		718AE0222AD75C0900A5DCA3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				718AE0232AD75C1D00A5DCA3 /* PlayerView.swift */,
+				718AE05B2AD7790200A5DCA3 /* MenuView.swift */,
+				718AE05D2AD7794A00A5DCA3 /* MainView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		718AE0552AD76E3400A5DCA3 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				718AE0452AD76E2C00A5DCA3 /* Helixa-Light.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		718AE0562AD7710900A5DCA3 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				718AE0572AD7711700A5DCA3 /* FontExtension.swift */,
+				718AE0592AD773E500A5DCA3 /* ColorExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		718AE05F2AD77A0700A5DCA3 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				718AE0602AD77A1100A5DCA3 /* ButtonComponent.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7168C2422AD5DA94003156C3 /* Preview Assets.xcassets in Resources */,
+				718AE0512AD76E2D00A5DCA3 /* Helixa-Light.ttf in Resources */,
 				7168C23F2AD5DA94003156C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,9 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718AE0582AD7711700A5DCA3 /* FontExtension.swift in Sources */,
+				718AE0612AD77A1100A5DCA3 /* ButtonComponent.swift in Sources */,
+				718AE05C2AD7790200A5DCA3 /* MenuView.swift in Sources */,
 				7168C23B2AD5DA93003156C3 /* ContentView.swift in Sources */,
 				7168C24B2AD5DC8A003156C3 /* PlayerViewModel.swift in Sources */,
 				7168C23D2AD5DA93003156C3 /* Item.swift in Sources */,
+				718AE05E2AD7794A00A5DCA3 /* MainView.swift in Sources */,
+				718AE0242AD75C1D00A5DCA3 /* PlayerView.swift in Sources */,
+				718AE05A2AD773E500A5DCA3 /* ColorExtension.swift in Sources */,
 				7168C2392AD5DA93003156C3 /* roxetteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

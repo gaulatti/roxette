@@ -10,6 +10,17 @@ import SwiftData
 
 @main
 struct roxetteApp: App {
+    
+    init() {
+        printFonts()
+    }
+    
+    func printFonts() {
+        let familyNames = UIFont.familyNames
+        for familyName in familyNames {
+            print(familyName)
+        }
+    }
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,

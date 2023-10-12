@@ -26,6 +26,8 @@
 		718AE06A2AD7987200A5DCA3 /* EnvironmentValuesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0692AD7987200A5DCA3 /* EnvironmentValuesExtension.swift */; };
 		718AE06C2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */; };
 		71A25A1D2AD7AA5B00ED4D1D /* RoxetteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A25A1C2AD7AA5B00ED4D1D /* RoxetteComponent.swift */; };
+		71E5481B2AD82FC0001013E6 /* SidebarsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E5481A2AD82FC0001013E6 /* SidebarsEnum.swift */; };
+		71E5481D2AD83040001013E6 /* GlobalStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E5481C2AD83040001013E6 /* GlobalStateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		718AE0692AD7987200A5DCA3 /* EnvironmentValuesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValuesExtension.swift; sourceTree = "<group>"; };
 		718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MidnightRider-Regular.ttf"; sourceTree = "<group>"; };
 		71A25A1C2AD7AA5B00ED4D1D /* RoxetteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoxetteComponent.swift; sourceTree = "<group>"; };
+		71E5481A2AD82FC0001013E6 /* SidebarsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarsEnum.swift; sourceTree = "<group>"; };
+		71E5481C2AD83040001013E6 /* GlobalStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7168C24A2AD5DC8A003156C3 /* PlayerViewModel.swift */,
+				71E5481C2AD83040001013E6 /* GlobalStateViewModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				718AE0632AD782E500A5DCA3 /* ViewsEnum.swift */,
+				71E5481A2AD82FC0001013E6 /* SidebarsEnum.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				718AE0612AD77A1100A5DCA3 /* ButtonComponent.swift in Sources */,
 				718AE05C2AD7790200A5DCA3 /* MenuView.swift in Sources */,
 				7168C23B2AD5DA93003156C3 /* ContentView.swift in Sources */,
+				71E5481D2AD83040001013E6 /* GlobalStateViewModel.swift in Sources */,
 				71A25A1D2AD7AA5B00ED4D1D /* RoxetteComponent.swift in Sources */,
 				718AE0682AD791FA00A5DCA3 /* HeaderComponent.swift in Sources */,
 				7168C24B2AD5DC8A003156C3 /* PlayerViewModel.swift in Sources */,
@@ -249,6 +256,7 @@
 				718AE05A2AD773E500A5DCA3 /* ColorExtension.swift in Sources */,
 				718AE06A2AD7987200A5DCA3 /* EnvironmentValuesExtension.swift in Sources */,
 				7168C2392AD5DA93003156C3 /* roxetteApp.swift in Sources */,
+				71E5481B2AD82FC0001013E6 /* SidebarsEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

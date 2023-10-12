@@ -10,19 +10,6 @@ import SwiftData
 
 @main
 struct roxetteApp: App {
-    init() {
-        loadFonts()
-    }
-    
-    func loadFonts() {
-        for family: String in UIFont.familyNames {
-            print("\(family)")
-            for names: String in UIFont.fontNames(forFamilyName: family) {
-                print("== \(names)")
-            }
-        }
-    }
-
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,

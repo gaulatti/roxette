@@ -10,9 +10,8 @@ import SwiftUI
 
 struct XhrView: View {
     var body: some View {
-        Spacer()
         VStack(alignment: .leading) {
-            Text("lala")
+            Text("lala").foregroundStyle(Color.black)
         }
     }
 }

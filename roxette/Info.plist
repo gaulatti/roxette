@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>MidnightRider-Regular.ttf</string>
 		<string>Helixa-Light.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>

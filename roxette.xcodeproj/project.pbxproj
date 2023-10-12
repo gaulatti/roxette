@@ -22,6 +22,9 @@
 		718AE0612AD77A1100A5DCA3 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0602AD77A1100A5DCA3 /* ButtonComponent.swift */; };
 		718AE0642AD782E500A5DCA3 /* ViewsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0632AD782E500A5DCA3 /* ViewsEnum.swift */; };
 		718AE0662AD783A500A5DCA3 /* XhrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0652AD783A500A5DCA3 /* XhrView.swift */; };
+		718AE0682AD791FA00A5DCA3 /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0672AD791FA00A5DCA3 /* HeaderComponent.swift */; };
+		718AE06A2AD7987200A5DCA3 /* EnvironmentValuesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0692AD7987200A5DCA3 /* EnvironmentValuesExtension.swift */; };
+		718AE06C2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		718AE0602AD77A1100A5DCA3 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		718AE0632AD782E500A5DCA3 /* ViewsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsEnum.swift; sourceTree = "<group>"; };
 		718AE0652AD783A500A5DCA3 /* XhrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XhrView.swift; sourceTree = "<group>"; };
+		718AE0672AD791FA00A5DCA3 /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
+		718AE0692AD7987200A5DCA3 /* EnvironmentValuesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValuesExtension.swift; sourceTree = "<group>"; };
+		718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MidnightRider-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 		718AE0552AD76E3400A5DCA3 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */,
 				718AE0452AD76E2C00A5DCA3 /* Helixa-Light.ttf */,
 			);
 			path = fonts;
@@ -130,6 +137,7 @@
 			children = (
 				718AE0572AD7711700A5DCA3 /* FontExtension.swift */,
 				718AE0592AD773E500A5DCA3 /* ColorExtension.swift */,
+				718AE0692AD7987200A5DCA3 /* EnvironmentValuesExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				718AE0602AD77A1100A5DCA3 /* ButtonComponent.swift */,
+				718AE0672AD791FA00A5DCA3 /* HeaderComponent.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 			files = (
 				7168C2422AD5DA94003156C3 /* Preview Assets.xcassets in Resources */,
 				718AE0512AD76E2D00A5DCA3 /* Helixa-Light.ttf in Resources */,
+				718AE06C2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf in Resources */,
 				7168C23F2AD5DA94003156C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +235,7 @@
 				718AE0612AD77A1100A5DCA3 /* ButtonComponent.swift in Sources */,
 				718AE05C2AD7790200A5DCA3 /* MenuView.swift in Sources */,
 				7168C23B2AD5DA93003156C3 /* ContentView.swift in Sources */,
+				718AE0682AD791FA00A5DCA3 /* HeaderComponent.swift in Sources */,
 				7168C24B2AD5DC8A003156C3 /* PlayerViewModel.swift in Sources */,
 				7168C23D2AD5DA93003156C3 /* Item.swift in Sources */,
 				718AE0642AD782E500A5DCA3 /* ViewsEnum.swift in Sources */,
@@ -232,6 +243,7 @@
 				718AE0242AD75C1D00A5DCA3 /* PlayerView.swift in Sources */,
 				718AE0662AD783A500A5DCA3 /* XhrView.swift in Sources */,
 				718AE05A2AD773E500A5DCA3 /* ColorExtension.swift in Sources */,
+				718AE06A2AD7987200A5DCA3 /* EnvironmentValuesExtension.swift in Sources */,
 				7168C2392AD5DA93003156C3 /* roxetteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

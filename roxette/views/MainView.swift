@@ -14,41 +14,26 @@ struct MainView: View {
     var body: some View {
         VStack(alignment: .leading) {
             VStack {
+                HeaderComponent(showMenu: $showMenu)
                 switch currentView {
                 case .player:
                     PlayerView()
-                    Button("Toggle Menu") {
-                        withAnimation {
-                            self.showMenu.toggle()
-                        }
-                    }
                 case .xhr:
-                    XhrView() // Assuming you have a view named XHRView
-                    Button("Toggle Menu") {
-                        withAnimation {
-                            self.showMenu.toggle()
-                        }
-                    }
+                    XhrView()
                 case .home:
-                    Spacer()
-                    Button("Toggle Menu") {
-                        withAnimation {
-                            self.showMenu.toggle()
-                        }
-                    }
+                   Text("This is just the home. Check the menu for more things.").foregroundStyle(Color.black)
                 }
                 Spacer()
-            }.blur(radius: showMenu ? 10 : 0)
+            }.blur(radius: showMenu ? 3 : 0)
         }
         .frame(
-            minWidth: UIScreen.main.bounds.width,
-            minHeight: UIScreen.main.bounds.height
+            minWidth: UIScreen.main.bounds.width
         )
         .background(Color.white)
         .cornerRadius(10)
         .shadow(
-            color: .menuContentShadow,
-            radius: showMenu ? 30: 0
+            color: showMenu ? .menuContentShadow : .white,
+            radius: showMenu ? 5 : 0
         )
         .scaleEffect(showMenu ? 0.8 : 1)
         .offset(x: showMenu ? UIScreen.main.bounds.width * 0.6 : 0)

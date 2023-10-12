@@ -11,15 +11,15 @@ import SwiftData
 import SwiftUI
 
 struct PlayerView: View {
-    @StateObject private var player = PlayerViewModel()
+    @EnvironmentObject var player: PlayerViewModel
     @State private var wasPlayingBeforeDrag: Bool = false
     @State private var isDragging: Bool = false
     
     var body: some View {
-        Spacer()
         VStack {
             Text(player.currentTitle)
                 .font(.headline)
+                .foregroundStyle(Color.black)
                 .padding()
             
             HStack {
@@ -61,11 +61,11 @@ struct PlayerView: View {
                 }
             }
         }
-        .padding()
     }
 }
 
 #Preview {
     PlayerView()
         .modelContainer(for: Item.self, inMemory: true)
+        .environmentObject(PlayerViewModel.shared)
 }

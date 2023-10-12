@@ -10,17 +10,19 @@ import SwiftData
 
 @main
 struct roxetteApp: App {
-    
     init() {
-        printFonts()
+        loadFonts()
     }
     
-    func printFonts() {
-        let familyNames = UIFont.familyNames
-        for familyName in familyNames {
-            print(familyName)
+    func loadFonts() {
+        for family: String in UIFont.familyNames {
+            print("\(family)")
+            for names: String in UIFont.fontNames(forFamilyName: family) {
+                print("== \(names)")
+            }
         }
     }
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -37,6 +39,7 @@ struct roxetteApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(PlayerViewModel.shared)
         }
         .modelContainer(sharedModelContainer)
     }

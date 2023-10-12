@@ -6,25 +6,27 @@ struct ContentView: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            MenuView(showMenu: $showMenu, currentView: $currentView)
-                .id("menu")
-            
+            if showMenu {
+                MenuView(showMenu: $showMenu, currentView: $currentView)
+                    .id("menu")
+            }
+
             MainView(showMenu: $showMenu, currentView: $currentView)
                 .id("content")
                 .onTapGesture {
                     withAnimation {
-                        self.showMenu.toggle()
+                        if(showMenu) {
+                            self.showMenu.toggle()
+                        }
                     }
                 }
-        }
-        .background(Color.menuBackground)
-        .edgesIgnoringSafeArea(.all)
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        }.background(showMenu ? Color.menuBackground : Color.white)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(PlayerViewModel.shared)
     }
 }

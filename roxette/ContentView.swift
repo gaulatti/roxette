@@ -2,13 +2,14 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showMenu = false
+    @State private var currentView: ViewsEnum = .home
     
     var body: some View {
         ZStack(alignment: .leading) {
-            MenuView(showMenu: $showMenu)
+            MenuView(showMenu: $showMenu, currentView: $currentView)
                 .id("menu")
             
-            MainView(showMenu: $showMenu)
+            MainView(showMenu: $showMenu, currentView: $currentView)
                 .id("content")
                 .onTapGesture {
                     withAnimation {

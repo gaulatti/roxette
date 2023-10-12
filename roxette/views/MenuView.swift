@@ -9,15 +9,18 @@ import SwiftUI
 
 struct MenuView: View {
     @Binding var showMenu: Bool
+    @Binding var currentView: ViewsEnum
     
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
                 Spacer()
                 ButtonComponent(label: "Player Prototype") {
+                    self.currentView = .player
                     self.showMenu.toggle()
                 }
                 ButtonComponent(label: "XHR Prototype") {
+                    self.currentView = .xhr
                     self.showMenu.toggle()
                 }
                 Spacer()

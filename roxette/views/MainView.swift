@@ -9,16 +9,32 @@ import SwiftUI
 
 struct MainView: View {
     @Binding var showMenu: Bool
+    @Binding var currentView: ViewsEnum
     
     var body: some View {
         VStack(alignment: .leading) {
             VStack {
-                Spacer()
-                PlayerView()
-                
-                Button("Toggle Menu") {
-                    withAnimation {
-                        self.showMenu.toggle()
+                switch currentView {
+                case .player:
+                    PlayerView()
+                    Button("Toggle Menu") {
+                        withAnimation {
+                            self.showMenu.toggle()
+                        }
+                    }
+                case .xhr:
+                    XhrView() // Assuming you have a view named XHRView
+                    Button("Toggle Menu") {
+                        withAnimation {
+                            self.showMenu.toggle()
+                        }
+                    }
+                case .home:
+                    Spacer()
+                    Button("Toggle Menu") {
+                        withAnimation {
+                            self.showMenu.toggle()
+                        }
                     }
                 }
                 Spacer()

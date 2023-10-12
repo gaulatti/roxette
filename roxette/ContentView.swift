@@ -5,11 +5,9 @@ struct ContentView: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            if showMenu {
-                MenuView(showMenu: $showMenu)
-                    .id("menu")
-            }
-                    
+            MenuView(showMenu: $showMenu)
+                .id("menu")
+            
             MainView(showMenu: $showMenu)
                 .id("content")
                 .onTapGesture {

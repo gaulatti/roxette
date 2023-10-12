@@ -7,15 +7,27 @@
 
 import SwiftUI
 
+
 struct PlaylistQueueComponent: View {
     var body: some View {
-        Text("Playlist Queue")
-            .font(Font.custom("Midnight Rider", size: 48).weight(.light))
-            .frame(width: UIScreen.main.bounds.width * 0.6, height: 60)
+        RoundedRectangle(cornerRadius: 16)
+            .foregroundStyle(
+                Color.menuPurple.gradient.shadow(.inner(color: .black.opacity(0.5), radius: 40, x: 1, y: 1))
+            )
+            .overlay(
+                ScrollView {
+                    VStack {
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                        PlaylistSongComponent()
+                    }.padding()
+                }
+            )
     }
 }
-
-#Preview {
-    PlaylistQueueComponent()
-}
-

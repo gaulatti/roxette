@@ -10,13 +10,11 @@ import SwiftUI
 
 struct NowPlayingComponent: View {
     var body: some View {
-        Text("Now Playing")
-            .font(Font.custom("Midnight Rider", size: 48).weight(.light))
-            .frame(width: UIScreen.main.bounds.width * 0.6, height: 60)
+        HStack {
+            Text("**Now Playing:** 3 children among family of 6 killed on kibbutz near Gaza")
+                .font(Font.custom("RNS Sanz", size: 16))
+                .foregroundColor(.menuPurple)
+                .frame(width: UIScreen.main.bounds.width * 0.6)
+        }.padding()
     }
-}
-
-
-#Preview {
-    NowPlayingComponent()
 }

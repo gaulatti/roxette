@@ -6,6 +6,8 @@
 	<array>
 		<string>MidnightRider-Regular.ttf</string>
 		<string>Helixa-Light.ttf</string>
+		<string>RNSSanz-Medium.otf</string>
+		<string>RNSSanz-Bold.otf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

@@ -31,6 +31,11 @@
 		AAD7F3B42AD8685E0034AC44 /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7F3B32AD8685E0034AC44 /* PlaylistView.swift */; };
 		AAD7F3BA2AD872A50034AC44 /* NowPlayingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7F3B92AD872A50034AC44 /* NowPlayingComponent.swift */; };
 		AAD7F3BC2AD872FB0034AC44 /* PlaylistQueueComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7F3BB2AD872FB0034AC44 /* PlaylistQueueComponent.swift */; };
+		AAD7F3BE2AD88ADC0034AC44 /* PlaybackControlsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7F3BD2AD88ADC0034AC44 /* PlaybackControlsComponent.swift */; };
+		AAD7F3C02AD88E240034AC44 /* PlaybackActionsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7F3BF2AD88E240034AC44 /* PlaybackActionsComponent.swift */; };
+		AAD7F3C22AD8970F0034AC44 /* PlaylistSongComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7F3C12AD8970F0034AC44 /* PlaylistSongComponent.swift */; };
+		AAD7F3C42AD8A7FD0034AC44 /* RNSSanz-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAD7F3C32AD8A7FD0034AC44 /* RNSSanz-Medium.otf */; };
+		AAD7F3C62AD8ACDF0034AC44 /* RNSSanz-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AAD7F3C52AD8ACDF0034AC44 /* RNSSanz-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		AAD7F3B32AD8685E0034AC44 /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
 		AAD7F3B92AD872A50034AC44 /* NowPlayingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingComponent.swift; sourceTree = "<group>"; };
 		AAD7F3BB2AD872FB0034AC44 /* PlaylistQueueComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistQueueComponent.swift; sourceTree = "<group>"; };
+		AAD7F3BD2AD88ADC0034AC44 /* PlaybackControlsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControlsComponent.swift; sourceTree = "<group>"; };
+		AAD7F3BF2AD88E240034AC44 /* PlaybackActionsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackActionsComponent.swift; sourceTree = "<group>"; };
+		AAD7F3C12AD8970F0034AC44 /* PlaylistSongComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSongComponent.swift; sourceTree = "<group>"; };
+		AAD7F3C32AD8A7FD0034AC44 /* RNSSanz-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RNSSanz-Medium.otf"; sourceTree = "<group>"; };
+		AAD7F3C52AD8ACDF0034AC44 /* RNSSanz-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RNSSanz-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,8 @@
 		718AE0552AD76E3400A5DCA3 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				AAD7F3C32AD8A7FD0034AC44 /* RNSSanz-Medium.otf */,
+				AAD7F3C52AD8ACDF0034AC44 /* RNSSanz-Bold.otf */,
 				718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */,
 				718AE0452AD76E2C00A5DCA3 /* Helixa-Light.ttf */,
 			);
@@ -205,6 +217,9 @@
 			children = (
 				AAD7F3B92AD872A50034AC44 /* NowPlayingComponent.swift */,
 				AAD7F3BB2AD872FB0034AC44 /* PlaylistQueueComponent.swift */,
+				AAD7F3BD2AD88ADC0034AC44 /* PlaybackControlsComponent.swift */,
+				AAD7F3BF2AD88E240034AC44 /* PlaybackActionsComponent.swift */,
+				AAD7F3C12AD8970F0034AC44 /* PlaylistSongComponent.swift */,
 			);
 			path = playlist;
 			sourceTree = "<group>";
@@ -267,10 +282,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD7F3C62AD8ACDF0034AC44 /* RNSSanz-Bold.otf in Resources */,
 				7168C2422AD5DA94003156C3 /* Preview Assets.xcassets in Resources */,
 				718AE0512AD76E2D00A5DCA3 /* Helixa-Light.ttf in Resources */,
 				718AE06C2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf in Resources */,
 				7168C23F2AD5DA94003156C3 /* Assets.xcassets in Resources */,
+				AAD7F3C42AD8A7FD0034AC44 /* RNSSanz-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +300,8 @@
 			files = (
 				718AE0582AD7711700A5DCA3 /* FontExtension.swift in Sources */,
 				718AE0612AD77A1100A5DCA3 /* MenuButtonComponent.swift in Sources */,
+				AAD7F3BE2AD88ADC0034AC44 /* PlaybackControlsComponent.swift in Sources */,
+				AAD7F3C02AD88E240034AC44 /* PlaybackActionsComponent.swift in Sources */,
 				718AE05C2AD7790200A5DCA3 /* MenuView.swift in Sources */,
 				7168C23B2AD5DA93003156C3 /* ContentView.swift in Sources */,
 				71E5481D2AD83040001013E6 /* GlobalStateViewModel.swift in Sources */,
@@ -294,6 +313,7 @@
 				7168C23D2AD5DA93003156C3 /* Item.swift in Sources */,
 				718AE0642AD782E500A5DCA3 /* ViewsEnum.swift in Sources */,
 				718AE05E2AD7794A00A5DCA3 /* MainView.swift in Sources */,
+				AAD7F3C22AD8970F0034AC44 /* PlaylistSongComponent.swift in Sources */,
 				718AE0242AD75C1D00A5DCA3 /* PlayerView.swift in Sources */,
 				AAD7F3B42AD8685E0034AC44 /* PlaylistView.swift in Sources */,
 				718AE0662AD783A500A5DCA3 /* XhrView.swift in Sources */,

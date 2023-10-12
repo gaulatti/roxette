@@ -14,7 +14,7 @@ struct MenuView: View {
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                RoxetteComponent().padding(.top).foregroundColor(Color.menuPurple)
+                LogoComponent().padding(.top).foregroundColor(Color.menuPurple)
                 Spacer()
                 Rectangle()
                     .foregroundColor(.menuPurple)
@@ -22,15 +22,15 @@ struct MenuView: View {
                     .cornerRadius(15)
                     .padding(.bottom)
 
-                ButtonComponent(label: "Home", view: .home, currentView: currentView) {
+                MenuButtonComponent(label: "Home", view: .home, currentView: currentView) {
                     self.currentView = .home
                     self.globalState.currentSidebar = .none
                 }
-                ButtonComponent(label: "Player Prototype", view: .player, currentView: currentView) {
+                MenuButtonComponent(label: "Player Prototype", view: .player, currentView: currentView) {
                     self.currentView = .player
                     self.globalState.currentSidebar = .none
                 }
-                ButtonComponent(label: "XHR Prototype", view: .xhr, currentView: currentView) {
+                MenuButtonComponent(label: "XHR Prototype", view: .xhr, currentView: currentView) {
                     self.currentView = .xhr
                     self.globalState.currentSidebar = .none
                 }

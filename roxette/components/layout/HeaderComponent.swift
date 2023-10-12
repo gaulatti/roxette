@@ -21,7 +21,7 @@ struct HeaderComponent: View {
                     Image(systemName: "line.horizontal.3")
                 }
                 Spacer()
-                RoxetteComponent().foregroundStyle(Color.black)
+                LogoComponent().foregroundStyle(Color.black)
                 Spacer()
                 Button(action: {
                     withAnimation {

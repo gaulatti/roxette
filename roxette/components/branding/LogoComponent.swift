@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RoxetteComponent: View {
+struct LogoComponent: View {
     var body: some View {
         Text("Roxette")
             .font(Font.custom("Midnight Rider", size: 48).weight(.light))

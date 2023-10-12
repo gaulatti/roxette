@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonComponent: View {
+struct MenuButtonComponent: View {
     let label: String
     let view: ViewsEnum
     let currentView: ViewsEnum

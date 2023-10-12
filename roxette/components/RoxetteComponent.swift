@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct RoxetteComponent: View {
-
     var body: some View {
         Text("Roxette")
             .font(Font.custom("Midnight Rider", size: 48).weight(.light))
+            .frame(height: 60)
     }
 }

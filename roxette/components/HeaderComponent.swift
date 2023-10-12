@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct HeaderComponent: View {
-    @Binding var showMenu: Bool
-    @Binding var showPlaylist: Bool
+    @EnvironmentObject var globalState: GlobalStateViewModel
     @State private var showingAlert = false
 
     var body: some View {
             HStack {
                 Button(action: {
                     withAnimation {
-                        showMenu.toggle()
+                        globalState.currentSidebar = .menu
                     }
                 }) {
                     Image(systemName: "line.horizontal.3")
@@ -26,7 +25,7 @@ struct HeaderComponent: View {
                 Spacer()
                 Button(action: {
                     withAnimation {
-                        showPlaylist.toggle()
+                        globalState.currentSidebar = .playlist
                     }
                 }) {
                     Image(systemName: "headphones")
@@ -40,7 +39,8 @@ struct HeaderComponent_Previews: PreviewProvider {
     static var previews: some View {
         @State var showMenu = false
         @State var showPlaylist = false
-        HeaderComponent(showMenu: $showMenu, showPlaylist: $showPlaylist)
+        HeaderComponent()
+            .environmentObject(GlobalStateViewModel.shared)
     }
 }
 

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct MenuView: View {
-    @Binding var showMenu: Bool
+    @EnvironmentObject var globalState: GlobalStateViewModel
     @Binding var currentView: ViewsEnum
-    
+
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
@@ -24,15 +24,15 @@ struct MenuView: View {
 
                 ButtonComponent(label: "Home", view: .home, currentView: currentView) {
                     self.currentView = .home
-                    self.showMenu.toggle()
+                    self.globalState.currentSidebar = .none
                 }
                 ButtonComponent(label: "Player Prototype", view: .player, currentView: currentView) {
                     self.currentView = .player
-                    self.showMenu.toggle()
+                    self.globalState.currentSidebar = .none
                 }
                 ButtonComponent(label: "XHR Prototype", view: .xhr, currentView: currentView) {
                     self.currentView = .xhr
-                    self.showMenu.toggle()
+                    self.globalState.currentSidebar = .none
                 }
 
                 Spacer()
@@ -45,10 +45,10 @@ struct MenuView: View {
 }
 
 struct MenuView_Previews: PreviewProvider {
-    @State static var showMenu = true
     @State static var currentView: ViewsEnum = .home
 
     static var previews: some View {
-        MenuView(showMenu: $showMenu, currentView: $currentView)
+        MenuView(currentView: $currentView)
+            .environmentObject(GlobalStateViewModel.shared)
     }
 }

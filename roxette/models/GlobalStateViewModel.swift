@@ -11,4 +11,8 @@ class GlobalStateViewModel: ObservableObject {
     static let shared = GlobalStateViewModel()
 
     @Published var currentSidebar: SidebarsEnum = .none
+
+    func isAnySidebarOpen() -> Bool {
+        return self.currentSidebar == .menu || self.currentSidebar == .playlist
+    }
 }

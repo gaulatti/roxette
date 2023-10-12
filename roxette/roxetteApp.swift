@@ -27,6 +27,7 @@ struct roxetteApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(PlayerViewModel.shared)
+                .environmentObject(GlobalStateViewModel.shared)
         }
         .modelContainer(sharedModelContainer)
     }

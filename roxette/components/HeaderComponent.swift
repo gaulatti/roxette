@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HeaderComponent: View {
     @Binding var showMenu: Bool
+    @Binding var showPlaylist: Bool
     @State private var showingAlert = false
 
     var body: some View {
@@ -24,14 +25,22 @@ struct HeaderComponent: View {
                 RoxetteComponent().foregroundStyle(Color.black)
                 Spacer()
                 Button(action: {
-                    showingAlert = true
+                    withAnimation {
+                        showPlaylist.toggle()
+                    }
                 }) {
-                    Image(systemName: "signature")
-                }
-                .alert("meow!", isPresented: $showingAlert) {
-                    Button("meow", role: .cancel) { }
+                    Image(systemName: "headphones")
                 }
             }.padding()
             
     }
 }
+
+struct HeaderComponent_Previews: PreviewProvider {
+    static var previews: some View {
+        @State var showMenu = false
+        @State var showPlaylist = false
+        HeaderComponent(showMenu: $showMenu, showPlaylist: $showPlaylist)
+    }
+}
+

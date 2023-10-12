@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showMenu = false
+    @State private var showPlaylist = false
     @State private var currentView: ViewsEnum = .home
     
     var body: some View {
@@ -10,8 +11,13 @@ struct ContentView: View {
                 MenuView(showMenu: $showMenu, currentView: $currentView)
                     .id("menu")
             }
+            
+            if showPlaylist {
+                MenuView(showMenu: $showMenu, currentView: $currentView)
+                    .id("menu")
+            }
 
-            MainView(showMenu: $showMenu, currentView: $currentView)
+            MainView(showMenu: $showMenu, showPlaylist: $showPlaylist, currentView: $currentView)
                 .id("content")
                 .onTapGesture {
                     withAnimation {

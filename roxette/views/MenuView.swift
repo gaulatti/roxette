@@ -14,6 +14,7 @@ struct MenuView: View {
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
+                RoxetteComponent().padding(.top).foregroundColor(Color.menuPurple)
                 Spacer()
                 Rectangle()
                     .foregroundColor(.menuPurple)
@@ -43,3 +44,11 @@ struct MenuView: View {
     }
 }
 
+struct MenuView_Previews: PreviewProvider {
+    @State static var showMenu = true
+    @State static var currentView: ViewsEnum = .home
+
+    static var previews: some View {
+        MenuView(showMenu: $showMenu, currentView: $currentView)
+    }
+}

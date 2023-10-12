@@ -21,7 +21,7 @@ struct HeaderComponent: View {
                     Image(systemName: "line.horizontal.3")
                 }
                 Spacer()
-                Text("Roxette").font(Font.custom("Midnight Rider", size: 48).weight(.light)).foregroundStyle(Color.black)
+                RoxetteComponent().foregroundStyle(Color.black)
                 Spacer()
                 Button(action: {
                     showingAlert = true

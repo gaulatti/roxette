@@ -25,6 +25,7 @@
 		718AE0682AD791FA00A5DCA3 /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0672AD791FA00A5DCA3 /* HeaderComponent.swift */; };
 		718AE06A2AD7987200A5DCA3 /* EnvironmentValuesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718AE0692AD7987200A5DCA3 /* EnvironmentValuesExtension.swift */; };
 		718AE06C2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */; };
+		71A25A1D2AD7AA5B00ED4D1D /* RoxetteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A25A1C2AD7AA5B00ED4D1D /* RoxetteComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		718AE0672AD791FA00A5DCA3 /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
 		718AE0692AD7987200A5DCA3 /* EnvironmentValuesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValuesExtension.swift; sourceTree = "<group>"; };
 		718AE06B2AD79D4800A5DCA3 /* MidnightRider-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MidnightRider-Regular.ttf"; sourceTree = "<group>"; };
+		71A25A1C2AD7AA5B00ED4D1D /* RoxetteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoxetteComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				718AE0602AD77A1100A5DCA3 /* ButtonComponent.swift */,
 				718AE0672AD791FA00A5DCA3 /* HeaderComponent.swift */,
+				71A25A1C2AD7AA5B00ED4D1D /* RoxetteComponent.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				718AE0612AD77A1100A5DCA3 /* ButtonComponent.swift in Sources */,
 				718AE05C2AD7790200A5DCA3 /* MenuView.swift in Sources */,
 				7168C23B2AD5DA93003156C3 /* ContentView.swift in Sources */,
+				71A25A1D2AD7AA5B00ED4D1D /* RoxetteComponent.swift in Sources */,
 				718AE0682AD791FA00A5DCA3 /* HeaderComponent.swift in Sources */,
 				7168C24B2AD5DC8A003156C3 /* PlayerViewModel.swift in Sources */,
 				7168C23D2AD5DA93003156C3 /* Item.swift in Sources */,

@@ -12,7 +12,7 @@ class PlayerViewModel: ObservableObject {
     private var audioPlayer: AVPlayer!
     private var timeObserver: Any?
     
-    @Published var currentTitle: String = "Lo estamos pasando muy bien"
+    @Published var currentTitle: String = "Radio Cooperativa"
     @Published var currentTime: TimeInterval = 0
     @Published var duration: TimeInterval = 0
     @Published var isPlaying: Bool = false
@@ -26,7 +26,7 @@ class PlayerViewModel: ObservableObject {
      */
     init() {
         configureAudioSession()
-        guard let url = URL(string: "https://cdn.oxozon.io/prisioneros.mp3") else { return }
+        guard let url = URL(string: "https://www.cooperativa.cl/noticias/prontus/player_streaming/usa.m3u") else { return }
         audioPlayer = AVPlayer(url: url)
         
         setupTimeObserver()

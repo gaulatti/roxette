@@ -41,9 +41,8 @@ struct PlaylistView: View {
     }
 }
 
-struct PlaylistView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaylistView()
-            .environmentObject(GlobalStateViewModel.shared)
-    }
+#Preview {
+    PlaylistView()
+        .modelContainer(for: Item.self, inMemory: true)
+        .environmentObject(GlobalStateViewModel.shared)
 }

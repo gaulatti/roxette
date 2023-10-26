@@ -29,10 +29,10 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(PlayerViewModel.shared)
-            .environmentObject(GlobalStateViewModel.shared)
-    }
+
+#Preview {
+    ContentView()
+        .modelContainer(for: Item.self, inMemory: true)
+        .environmentObject(PlayerViewModel.shared)
+        .environmentObject(GlobalStateViewModel.shared)
 }

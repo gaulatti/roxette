@@ -50,3 +50,11 @@ struct MainView: View {
     }
 }
 
+struct MainView_Previews: PreviewProvider {
+    @State static var currentView: ViewsEnum = .home
+
+    static var previews: some View {
+        MainView(currentView: $currentView)
+            .environmentObject(GlobalStateViewModel.shared)
+    }
+}

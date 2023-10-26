@@ -11,9 +11,12 @@ import SwiftUI
 struct XhrView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("lala").foregroundStyle(Color.black)
+            Text("lolo").foregroundStyle(Color.black)
         }
     }
 }
 
 
+#Preview {
+    XhrView()
+}

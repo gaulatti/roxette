@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct PlaybackControlsComponent: View {
+    @EnvironmentObject var player: PlayerViewModel
+    @State private var wasPlayingBeforeDrag: Bool = false
+    @State private var isDragging: Bool = false
     @State private var total: Double = 45.0
+    
     var body: some View {
         VStack {
             PlaybackActionsComponent()
@@ -33,8 +37,14 @@ struct PlaybackControlsComponent: View {
                 Button(action: { }) {
                     Image(systemName: "backward.fill").frame(height: 32).font(.system(size: 32))
                 }.padding(.trailing)
-                Button(action: { }) {
-                    Image(systemName: "play.circle.fill").frame(height: 32).font(.system(size: 32))
+                Button(action: {
+                    if player.isPlaying {
+                        player.pause()
+                    } else {
+                        player.play()
+                    }
+                }) {
+                    Image(systemName: player.isPlaying ? "pause.circle.fill" : "play.circle.fill").frame(height: 32).font(.system(size: 32))
                 }.padding(.trailing)
                 Button(action: { }) {
                     Image(systemName: "forward.fill").frame(height: 32).font(.system(size: 32))
@@ -48,6 +58,7 @@ struct PlaybackControlsComponent: View {
 struct PlaybackControlsComponent_Previews: PreviewProvider {
     static var previews: some View {
         PlaybackControlsComponent()
+            .environmentObject(PlayerViewModel.shared)
     }
 }
 

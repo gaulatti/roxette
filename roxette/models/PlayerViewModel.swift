@@ -159,4 +159,19 @@ class PlayerViewModel: ObservableObject {
         
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
     }
+    
+    func timeString(from seconds: TimeInterval) -> String {
+        if(seconds.isFinite) {
+            let totalSeconds = Int(seconds)
+            let minutes = totalSeconds / 60
+            let remainingSeconds = totalSeconds % 60
+            return String(format: "%02d:%02d", minutes, remainingSeconds)
+        }
+        
+        return ""
+    }
+    
+    func isLive() -> Bool {
+        return isPlaying && duration.isInfinite
+    }
 }

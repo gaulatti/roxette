@@ -30,7 +30,7 @@ struct PlaybackControlsComponent: View {
             HStack {
                 Text("0:17").font(.menuItem)
                 Spacer()
-                Text("3:13").font(.menuItem)
+                Text(player.timeString(from: player.duration)).font(.menuItem)
             }.padding(.horizontal)
             HStack {
                 Spacer()

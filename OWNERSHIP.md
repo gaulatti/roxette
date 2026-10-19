@@ -1,6 +1,6 @@
 # Roxette ownership and disposition audit
 
-Audit date: 2026-09-07
+Historical audit notes dated: 2026-09-07
 
 Default branch and audited commit: `main` at
 `40f98b18ce0913fdb2b073c35df5e1b0e800f02e`
@@ -20,9 +20,16 @@ must stay unchanged until the owner confirms the private Apple distribution
 boundary. That external gate does not make the application a retained product;
 it prevents us from claiming that the archive operation itself is complete.
 
-## Evidence
+## Historical audit notes and evidence limits
 
-| Surface | Method | Result |
+The table preserves September reports. Underlying GitHub, Apple, signing,
+stream, portfolio-search and build receipts, including an exact Xcode version,
+are not retained with this PR. Those observations have not been reproduced in
+the 2026-10-19 documentation review and are not current verification or evidence
+of exhaustive absence. Repository source establishes the configured inputs,
+not live stream health, installed identities, distribution or current build status.
+
+| Surface | Recorded method | Recorded result (external/build reports unverified) |
 | --- | --- | --- |
 | Repository | Local Git plus GitHub repository and branch APIs | Public, unarchived repository; sole unprotected `main` at `40f98b18ce0913fdb2b073c35df5e1b0e800f02e`; 22 commits; last commit 2023-11-15. The only other open repository issue is the 2023 swipe-enhancement task. |
 | GitHub delivery metadata | Actions workflow/run, deployment, environment, hook, secret-name, and variable APIs | No workflow, run, deployment, environment, repository webhook, Actions secret name, or Actions variable exists. GitHub Pages is not configured. |
@@ -30,8 +37,8 @@ it prevents us from claiming that the archive operation itself is complete.
 | Application identity | Xcode build settings and project inspection | One iOS application target uses bundle ID `io.oxozon.yearn.roxette`, version `1.0` build `1`, iOS 17, and Apple team `N32N2U54JS`. A valid local development identity exists, but local signing capability is not distribution or installation evidence. |
 | Apple public distribution | Apple's public iTunes lookup for the exact bundle ID | No public App Store record was returned. App Store Connect/TestFlight history and registered-device installations remain unverified because no authorized account surface was used. |
 | Product behavior | Full Swift-source and plist review | The only network product dependency is a hard-coded Radio Cooperativa M3U URL. There is no application backend or catalog integration. Apollo and SQLite packages are linked but not imported by application source. Background audio is enabled. |
-| External stream | Read-only HTTP requests to the exact playlist and both advertised stream URLs | The playlist currently returns HTTP 200 and advertises two cleartext HTTP streams that also respond. This proves only that third-party radio infrastructure is reachable; Roxette does not own it, and no playback was attempted on a device. |
-| Clean build | Package resolution, project enumeration, and generic iOS Simulator build with signing disabled | Xcode resolves Apollo 1.7.0 and SQLite.swift 0.14.1, but the build fails before application compilation because ApolloSQLite reports ambiguous `Expression` types under the current toolchain. The project has no test target. |
+| External stream | Read-only HTTP requests to the exact playlist and both advertised stream URLs | The dated notes report HTTP 200 and two responding cleartext HTTP streams; current reachability is unknown. Reachability would establish only third-party infrastructure health, not Roxette ownership or device playback. |
+| Clean build | Package resolution, project enumeration, and generic iOS Simulator build with signing disabled | The dated notes report resolving Apollo 1.7.0 and SQLite.swift 0.14.1, then an ApolloSQLite ambiguous `Expression` failure before application compilation. Without the exact toolchain and log this is not a verified current build result. The source defines no test target. |
 | Portfolio references | Exact repository/origin/bundle-ID search under `/Users/gaulatti/source/gaulatti` and `/Users/gaulatti/source/fifthbell`, plus GitHub issue search | No external source reference or consumer was found. The only historical external record is open Eleni issue #7, “Provide radios list to Roxette,” unchanged since 2023 and never implemented in Roxette. |
 
 ## Ownership and recovery contract
@@ -56,7 +63,7 @@ Before this audit, the repository had no README or ownership warning; a working
 third-party stream and resolvable packages could be mistaken for product health.
 
 After this audit, the archive disposition is prominent, the public and private
-distribution boundaries are separated, the current build failure is recorded,
+distribution boundaries are separated, the historical build report is qualified,
 and restoration conditions are explicit. There was no active automation to
 disable.
 
@@ -73,8 +80,8 @@ deployment, or source-history deletion was performed.
   closed as historical before or during repository archival.
 - The hard-coded Radio Cooperativa stream and branding require a new rights and
   transport-security review if anyone revives the prototype.
-- No physical-device install or playback was attempted. The current build does
-  not reach application compilation under the installed Xcode toolchain.
+- No physical-device install or playback was attempted. Current build status
+  remains unverified; the September failure report lacks a retained toolchain/log.
 - Only the public App Store surface was checked; private distribution and prior
   ad hoc installs cannot be disproved from repository evidence.
 
